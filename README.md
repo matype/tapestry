@@ -1,6 +1,6 @@
 # Tapestry
 
-TODO: Write a gem description
+[TAP (Test Anything Protocol)](http://testanything.org/) tools in Ruby.
 
 ## Installation
 
