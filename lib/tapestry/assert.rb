@@ -5,14 +5,14 @@ module Tapestry
       test_num = '' unless test_num
 
       if expected == actual
-        p 'ok ' + test_num.to_s
+        print("ok #{test_num}\n")
       else
-        p 'not ok ' + test_num.to_s
+        print("not ok #{test_num}\n")
       end
 
-      p '# ' + msg if msg != ''
+      print("# #{msg}") if msg != ''
 
-      result(expected actual) if expected != actual
+      result(expected, actual) if expected != actual
     end
 
     alias_method :equals, :equal
@@ -23,10 +23,10 @@ module Tapestry
     private
 
     def result(expected, actual)
-      p ' ---'
-      p '  actual:   ' + actual.to_s
-      p '  expected: ' + expected.to_s
-      p ' ---'
+      print(" ---\n")
+      print("    actual:   #{actual}\n")
+      print("  expected:   #{expected}\n")
+      print(" ---\n")
     end
 
   end

@@ -25,4 +25,20 @@ describe Tapestry do
     }
     expect(stdout).to eq("1..5\n")
   end
+
+  it 'tapestry.equal (ok)' do
+    tapestry = Tapestry::Test.new(1)
+    stdout = capture(:stdout) {
+      tapestry.equal(1, 1, 'ok test', 1)
+    }
+    expect(stdout).to eq("ok 1\n# ok test")
+  end
+
+  it 'tapestry.equal (not ok)' do
+    tapestry = Tapestry::Test.new(1)
+    stdout = capture(:stdout) {
+      tapestry.equal(1, 2, 'not ok test', 2)
+    }
+    expect(stdout).to eq("not ok 2\n# not ok test ---\n    actual:   2\n  expected:   1\n ---\n")
+  end
 end
