@@ -20,7 +20,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'tapestry'
+
+# @params [Integer] number of tests.
+tapestry = Tapestry::Test.new(1)
+
+expected = 2
+actual = 1 + 1
+msg = 'test1'
+test_num = 1
+
+tapestry.equal(expected, actual, msg, test_num)
+```
+
+## API
+
+### tapestry.equal(a, b, msg, num)
+
+Assert that `a == b` with an optional msg and test number.
+
+Aliases: `tapestry.equals()`, `tapestry.is()`, `tapestry.is_equal_to()`, `tapestry.is_equal_in()`
 
 ## Contributing
 
