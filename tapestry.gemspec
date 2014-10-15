@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Tapestry::VERSION
   spec.authors       = ["Masaaki Morishita"]
   spec.email         = ["ikasama3.0@gmail.com"]
-  spec.summary       = %q{Test Anything Protocol tools in ruby.}
-  spec.description   = %q{Test Anything Protocol tools in ruby.}
+  spec.summary       = %q{TAP tools and Tap wrapper testing framework.}
+  spec.description   = %q{TAP tools and Tap wrapper testing framework in Ruby.}
   spec.homepage      = "https://github.com/morishitter/tapestry"
   spec.license       = "MIT"
 

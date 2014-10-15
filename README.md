@@ -1,6 +1,8 @@
 # Tapestry
 
-[TAP (Test Anything Protocol)](http://testanything.org/) tools in Ruby.
+[TAP](http://testanything.org/) tools and its wrapper testing framework in Ruby.
+
+Tapestry API is inspired by [tape](https://github.com/substack/tape).
 
 ## Installation
 
