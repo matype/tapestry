@@ -42,6 +42,12 @@ Assert that `a == b` with an optional msg and test number.
 
 Aliases: `tapestry.equals()`, `tapestry.is()`, `tapestry.is_equal_to()`, `tapestry.is_equal_in()`
 
+### tapestry.dont_equal(a, b, msg, num)
+
+Assert that `a != b` with an optional msg and test number.
+
+Aliases: `tapestry.dosent_equal()`, `tapestry.isnt()`, `tapestry.isnt_equal_to()`, `tapestry.isnt_equal_in()`
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/tapestry/fork )
