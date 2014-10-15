@@ -42,18 +42,18 @@ describe Tapestry do
     expect(stdout).to eq("not ok 2\n# tapestry.equal(): not ok test ---\n    actual:   2\n  expected:   1\n ---\n")
   end
 
-  it 'tapestry.dont_equal (ok)' do
+  it 'tapestry.not_equal (ok)' do
     tapestry = Tapestry::Test.new(1)
     stdout = capture(:stdout) {
-      tapestry.dont_equal(1, 2, 'tapestry.dont_equal(): ok test', 3)
+      tapestry.not_equal(1, 2, 'tapestry.dont_equal(): ok test', 3)
     }
     expect(stdout).to eq("ok 3\n# tapestry.dont_equal(): ok test")
   end
 
-  it 'tapestry.dont_equal (not ok)' do
+  it 'tapestry.not_equal (not ok)' do
     tapestry = Tapestry::Test.new(1)
     stdout = capture(:stdout) {
-      tapestry.dont_equal(1, 1, 'tapestry.dont_equal(): not ok test', 4)
+      tapestry.not_equal(1, 1, 'tapestry.dont_equal(): not ok test', 4)
     }
     expect(stdout).to eq("not ok 4\n# tapestry.dont_equal(): not ok test ---\n    actual:   1\n  expected:   1\n ---\n")
   end

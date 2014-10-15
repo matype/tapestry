@@ -21,7 +21,7 @@ module Tapestry
     alias_method :is_equal_in, :equal
 
 
-    def dont_equal(expected, actual, msg, test_num)
+    def not_equal(expected, actual, msg, test_num)
       test_num = '' unless test_num
 
       if expected != actual
@@ -35,10 +35,9 @@ module Tapestry
       result(expected, actual) if expected == actual
     end
 
-    alias_method :dosent_equal, :dont_equal
-    alias_method :isnt, :dont_equal
-    alias_method :isnt_equal_to, :dont_equal
-    alias_method :isnt_equal_in, :dont_equal
+    alias_method :is_not, :not_equal
+    alias_method :is_not_equal_to, :not_equal
+    alias_method :is_not_equal_in, :not_equal
 
 
     private
