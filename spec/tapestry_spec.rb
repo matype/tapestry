@@ -58,4 +58,12 @@ describe Tapestry do
     expect(stdout).to eq("not ok 4\n# tapestry.dont_equal(): not ok test ---\n    actual:   1\n  expected:   1\n ---\n")
   end
 
+  it 'tapestry.description' do
+    tapestry = Tapestry::Test.new(1)
+    stdout = capture(:stdout) {
+      tapestry.description("sample description")
+    }
+    expect(stdout).to eq("sample description\n")
+  end
+
 end

@@ -1,5 +1,6 @@
 require "tapestry/version"
 require "tapestry/assert"
+require "tapestry/description"
 
 module Tapestry
   class Test
